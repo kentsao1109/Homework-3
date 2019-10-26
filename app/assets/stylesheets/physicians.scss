@@ -1,3 +1,27 @@
 // Place all the styles related to the Physicians controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+p{
+
+}
+
+body {
+  font-family: "helvetica";
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+th, td {
+  padding-right: 15px;
+  text-align: left;
+  display: table-cell;
+  vertical-align: inherit;
+}

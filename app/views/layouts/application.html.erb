@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HW3</title>
+    <title>Homework 3</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+  <div id = "header">
+    <h1>Appointment Manager</h1>
+    <p class="fancy">
+      <%= link_to 'Physicians', physicians_path %>
+      <%= link_to 'Appointments', appointments_path %>
+      <%= link_to 'Patients', patients_path %>
+    </p>
+  </div>
+
+
     <%= yield %>
   </body>
 </html>
