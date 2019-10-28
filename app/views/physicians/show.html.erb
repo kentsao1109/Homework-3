@@ -1,47 +1,47 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h2 id="physician_h2">
   <strong><%= @physician.name %></strong>
-</p>
+</h2>
 
-<p>
+<h3 id="physician_headers">
   <strong>Specialty:
   <%= @physician.specialty %></strong>
-</p>
+</h3>
 
-<h3>Office Locations</h3>
-<table>
-  <thead>
+<hr>
+<h3 id = "physician_headers">Office Locations</h3>
+<div id = "table_id">
+<table id = "physicians_show_table">
+  <tbody>
   <tr>
     <th>Street address</th>
     <th>Zip code</th>
     <th>Phone</th>
-    <th colspan="3"></th>
   </tr>
-  </thead>
 
-  <tbody>
   <% @physician.offices.each do |physician| %>
     <tr>
-      <td><%= physician.street_address %></td>
-      <td><%= physician.zip_code %></td>
-      <td><%= physician.phone %></td>
+      <td><%=physician.street_address %></td>
+      <td><%=physician.zip_code %></td>
+      <td><%=physician.phone %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+</div>
 
-<h3>Current Appointments</h3>
-<table>
-  <thead>
+
+<h3 id="physician_headers">Current Appointments</h3>
+<div id = "table_id">
+<table id="physicians_show_table">
+  <tbody>
   <tr>
     <th>Patient Name</th>
     <th>Date of Appointment</th>
-    <th colspan="3"></th>
   </tr>
-  </thead>
 
-  <tbody>
+
   <% @physician.appointments.each do |physician| %>
     <tr>
       <td><%= physician.patient.name %></td>
@@ -50,6 +50,7 @@
   <% end %>
   </tbody>
 </table>
+</div>
 
 <%= link_to 'Edit', edit_physician_path(@physician) %> |
 <%= link_to 'Back', physicians_path %>
